@@ -1,0 +1,26 @@
+<div>
+  <div>
+    <input
+      type="text"
+      name="autoCompleteId"
+      [(ngModel)]="model"
+      [ngbTypeahead]="searchUserId"
+      [inputFormatter]="formatterId"
+      [resultFormatter]="formatterId"
+      [placeholder]="placeholderid"
+      (selectItem)="onSelect($event)"
+    />
+  </div>
+
+  <div>
+    <input
+      type="text"
+      [(ngModel)]="model"
+      [ngbTypeahead]="searchUserName"
+      [inputFormatter]="formatterName"
+      [resultFormatter]="formatterName"
+      [placeholder]="placeholdername"
+      (selectItem)="onSelect($event)"
+    />
+  </div>
+</div>
